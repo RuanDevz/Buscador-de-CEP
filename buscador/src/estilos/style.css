@@ -105,3 +105,16 @@ input
         transform: rotateX(0deg);
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .title
+    {
+        font-size: 2em;
+    }
+
+    .infos
+    {
+        width: 300px;
+    }
+  }
+  
