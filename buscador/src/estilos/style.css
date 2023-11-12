@@ -84,6 +84,13 @@ input
     margin-top: 10px;
 }
 
+.msgerro
+{
+    font-size: 1em;
+    color: red;
+    font-weight: 500;
+}
+
 
 
 

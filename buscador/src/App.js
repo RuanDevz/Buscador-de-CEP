@@ -8,12 +8,13 @@ const App = () => {
 
   const [input, setInput] = useState("")
   const [cep,setCep] = useState({});
+  const [erro, setErro] = useState('')
 
   async function Handleclick()
   {
     if(input === '')
     {
-      alert("Preencha o CEP")
+      setErro("Preencha um CEP")
     }
 
     try
@@ -22,6 +23,7 @@ const App = () => {
       console.log(response.data)
       setCep(response.data)
       setInput("")
+      setErro("")
     }catch
     {
       alert("Ops erro na tentativa de busca");
@@ -38,6 +40,7 @@ const App = () => {
           <FiSearch size={30} color='#000'/>
         </button>
       </div>
+      <p className='msgerro'>{erro}</p>
 
       {Object.keys(cep).length > 0 && (
               <main className='infos'>
